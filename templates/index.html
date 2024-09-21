@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UT2k4 Key Gen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <a href="https://github.com/sgilissen/2k4gen" class="github-banner">Fork me on GitHub!</a>
+
+    <div class="container">
+        <h1>UT2k4 <br />Key Generator</h1>
+        <p>Click the button to generate a unique key for your game/server.</p>
+
+        <button id="fetch-uuid">Generate Key</button>
+
+        <input type="text" id="uuid-field" readonly placeholder="Your key will appear here...">
+        <button id="copy-uuid" class="copy-btn">Copy to Clipboard</button>
+
+        <p class="smallnotice">
+            Made by Noctis<br /><br />
+            Automated scripts (e.g. for server installs) <br />can use the <a href="{{ url_for('get_uuid') }}">"/get-uuid"</a> endpoint.
+        </p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
